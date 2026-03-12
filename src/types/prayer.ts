@@ -27,7 +27,7 @@ export interface Prayer {
   additionalPrayer?: AdditionalPrayer;
 }
 
-export interface PrayerCycle {
+export interface PrayerLibraryItem {
   id: string;
   title: string;
   type: 'weekly' | 'novena';
@@ -37,22 +37,8 @@ export interface PrayerCycle {
 }
 
 export interface DataStructure {
-  title: string;
-  source: {
-    publisher: string;
-    contact: string;
-    address: string;
-    phone: string;
-    fax: string;
-    email: string;
-    website: string;
-    year: number;
-    imprimatur: {
-      authority: string;
-      reference: string;
-    };
-  };
   roles: Record<string, string>;
   commonPrayers?: Record<string, string | Verse[]>;
-  cycles: PrayerCycle[];
+  litanies?: Record<string, Verse[]>;
+  library: PrayerLibraryItem[];
 }

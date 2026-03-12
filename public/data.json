@@ -1,19 +1,4 @@
 {
-  "title": "Molitva i Devetnice",
-  "source": {
-    "publisher": "Družba Misionara Krvi Kristove",
-    "contact": "Ilija Grgić, CPPS",
-    "address": "Razgled 3, HR-10000 Zagreb",
-    "phone": "+385 1 45 00 130",
-    "fax": "+385 1 45 00 134",
-    "email": "epps.zagreb@post.t-com.hr",
-    "website": "www.cpps.hr",
-    "year": 2018,
-    "imprimatur": {
-      "authority": "Nadbiskupski duhovni stol, Zagreb",
-      "reference": "3180/2006"
-    }
-  },
   "roles": {
     "P": "Predvoditelj (leader)",
     "S": "Svi (all / response)"
@@ -58,9 +43,90 @@
         "role": "S",
         "text": "Vjerujem u Duha Svetoga, svetu Crkvu katoličku, općinstvo svetih, oproštenje grijeha, uskrsnuće tijela, život vječni. Amen."
       }
+    ],
+    "O slavni sveti Josipe": [
+      {
+        "role": "P",
+        "text": "O slavni sveti Josipe, brižni čuvaru Svete obitelji, tebi se obraćamo s povjerenjem. Svojim si životom pokazao put vjerne službe Bogu. Izmoli nam milost da i mi, poput tebe, radosno prihvatimo Božju volju i u svemu tražimo Njegovu slavu."
+      }
     ]
   },
-  "cycles": [
+  "litanies": {
+    "Litanije svetog Josipa": [
+      { "role": "P", "text": "Gospodine, smiluj se!" },
+      { "role": "S", "text": "Kriste, smiluj se!" },
+      { "role": "P", "text": "Gospodine, smiluj se!" },
+      { "role": "P", "text": "Kriste, čuj nas!" },
+      { "role": "S", "text": "Kriste, usliši nas!" },
+      { "role": "P", "text": "Oče nebeski, Bože," },
+      { "role": "S", "text": "smiluj nam se!" },
+      { "role": "P", "text": "Sine, Otkupitelju svijeta, Bože," },
+      { "role": "S", "text": "smiluj nam se!" },
+      { "role": "P", "text": "Duše Sveti, Bože," },
+      { "role": "S", "text": "smiluj nam se!" },
+      { "role": "P", "text": "Sveto Trojstvo, jedan Bože," },
+      { "role": "S", "text": "smiluj nam se!" },
+      { "role": "P", "text": "Sveta Marijo," },
+      { "role": "S", "text": "moli za nas!" },
+      { "role": "P", "text": "Sveti Josipe," },
+      { "role": "S", "text": "moli za nas!" },
+      { "role": "P", "text": "Slavni porode Davidov," },
+      { "role": "S", "text": "moli za nas!" },
+      { "role": "P", "text": "Svjetlo patrijarha," },
+      { "role": "S", "text": "moli za nas!" },
+      { "role": "P", "text": "Zaručniče Bogorodice," },
+      { "role": "S", "text": "moli za nas!" },
+      { "role": "P", "text": "Prečisti čuvaru Djevice," },
+      { "role": "S", "text": "moli za nas!" },
+      { "role": "P", "text": "Hranitelju Sina Božjega," },
+      { "role": "S", "text": "moli za nas!" },
+      { "role": "P", "text": "Brižni branitelju Kristov," },
+      { "role": "S", "text": "moli za nas!" },
+      { "role": "P", "text": "Glavaru slavne Obitelji," },
+      { "role": "S", "text": "moli za nas!" },
+      { "role": "P", "text": "Josipe pravedni," },
+      { "role": "S", "text": "moli za nas!" },
+      { "role": "P", "text": "Josipe prečisti," },
+      { "role": "S", "text": "moli za nas!" },
+      { "role": "P", "text": "Josipe mudri," },
+      { "role": "S", "text": "moli za nas!" },
+      { "role": "P", "text": "Josipe jaki," },
+      { "role": "S", "text": "moli za nas!" },
+      { "role": "P", "text": "Josipe poslušni," },
+      { "role": "S", "text": "moli za nas!" },
+      { "role": "P", "text": "Josipe vjerni," },
+      { "role": "S", "text": "moli za nas!" },
+      { "role": "P", "text": "Ogledalo strpljivosti," },
+      { "role": "S", "text": "moli za nas!" },
+      { "role": "P", "text": "Ljubitelju siromaštva," },
+      { "role": "S", "text": "moli za nas!" },
+      { "role": "P", "text": "Uzor radnika," },
+      { "role": "S", "text": "moli za nas!" },
+      { "role": "P", "text": "Uraste domaćega života," },
+      { "role": "S", "text": "moli za nas!" },
+      { "role": "P", "text": "Čuvaru djevica," },
+      { "role": "S", "text": "moli za nas!" },
+      { "role": "P", "text": "Potporo obitelji," },
+      { "role": "S", "text": "moli za nas!" },
+      { "role": "P", "text": "Utjeho bijednih," },
+      { "role": "S", "text": "moli za nas!" },
+      { "role": "P", "text": "Ufanje bolesnih," },
+      { "role": "S", "text": "moli za nas!" },
+      { "role": "P", "text": "Zaštitniče umirućih," },
+      { "role": "S", "text": "moli za nas!" },
+      { "role": "P", "text": "Strahu zlih duhova," },
+      { "role": "S", "text": "moli za nas!" },
+      { "role": "P", "text": "Zaštitniče svete Crkve," },
+      { "role": "S", "text": "moli za nas!" },
+      { "role": "P", "text": "Jaganjče Božji, koji oduzimaš grijehe svijeta," },
+      { "role": "S", "text": "oprosti nam, Gospodine!" },
+      { "role": "P", "text": "Jaganjče Božji, koji oduzimaš grijehe svijeta," },
+      { "role": "S", "text": "usliši nas, Gospodine!" },
+      { "role": "P", "text": "Jaganjče Božji, koji oduzimaš grijehe svijeta," },
+      { "role": "S", "text": "smiluj nam se!" }
+    ]
+  },
+  "library": [
     {
       "id": "weekly-rosaries",
       "title": "Krunice — Tjedni molitveni ciklus",
@@ -501,7 +567,7 @@
               "verses": [
                 {
                   "role": "P",
-                  "text": "O slavni sveti Josipe, brižni čuvaru Svete obitelji, tebi se obraćamo s povjerenjem. Svojim si životom pokazao put vjerne službe Bogu. Izmoli nam milost da i mi, poput tebe, radosno prihvatimo Božju volju i u svemu tražimo Njegovu slavu."
+                  "text": "O slavni sveti Josipe"
                 }
               ]
             },
@@ -521,7 +587,15 @@
               "verses": [
                 {
                   "role": "S",
-                  "text": "Oče naš... Zdravo Marijo... Slava Ocu..."
+                  "text": "Oče naš"
+                },
+                {
+                  "role": "S",
+                  "text": "Zdravo Marijo"
+                },
+                {
+                  "role": "S",
+                  "text": "Slava Ocu"
                 }
               ]
             },
@@ -529,77 +603,7 @@
               "section": "litanije",
               "repeat": 1,
               "verses": [
-                { "role": "P", "text": "Gospodine, smiluj se!" },
-                { "role": "S", "text": "Kriste, smiluj se!" },
-                { "role": "P", "text": "Gospodine, smiluj se!" },
-                { "role": "P", "text": "Kriste, čuj nas!" },
-                { "role": "S", "text": "Kriste, usliši nas!" },
-                { "role": "P", "text": "Oče nebeski, Bože," },
-                { "role": "S", "text": "smiluj nam se!" },
-                { "role": "P", "text": "Sine, Otkupitelju svijeta, Bože," },
-                { "role": "S", "text": "smiluj nam se!" },
-                { "role": "P", "text": "Duše Sveti, Bože," },
-                { "role": "S", "text": "smiluj nam se!" },
-                { "role": "P", "text": "Sveto Trojstvo, jedan Bože," },
-                { "role": "S", "text": "smiluj nam se!" },
-                { "role": "P", "text": "Sveta Marijo," },
-                { "role": "S", "text": "moli za nas!" },
-                { "role": "P", "text": "Sveti Josipe," },
-                { "role": "S", "text": "moli za nas!" },
-                { "role": "P", "text": "Slavni porode Davidov," },
-                { "role": "S", "text": "moli za nas!" },
-                { "role": "P", "text": "Svjetlo patrijarha," },
-                { "role": "S", "text": "moli za nas!" },
-                { "role": "P", "text": "Zaručniče Bogorodice," },
-                { "role": "S", "text": "moli za nas!" },
-                { "role": "P", "text": "Prečisti čuvaru Djevice," },
-                { "role": "S", "text": "moli za nas!" },
-                { "role": "P", "text": "Hranitelju Sina Božjega," },
-                { "role": "S", "text": "moli za nas!" },
-                { "role": "P", "text": "Brižni branitelju Kristov," },
-                { "role": "S", "text": "moli za nas!" },
-                { "role": "P", "text": "Glavaru slavne Obitelji," },
-                { "role": "S", "text": "moli za nas!" },
-                { "role": "P", "text": "Josipe pravedni," },
-                { "role": "S", "text": "moli za nas!" },
-                { "role": "P", "text": "Josipe prečisti," },
-                { "role": "S", "text": "moli za nas!" },
-                { "role": "P", "text": "Josipe mudri," },
-                { "role": "S", "text": "moli za nas!" },
-                { "role": "P", "text": "Josipe jaki," },
-                { "role": "S", "text": "moli za nas!" },
-                { "role": "P", "text": "Josipe poslušni," },
-                { "role": "S", "text": "moli za nas!" },
-                { "role": "P", "text": "Josipe vjerni," },
-                { "role": "S", "text": "moli za nas!" },
-                { "role": "P", "text": "Ogledalo strpljivosti," },
-                { "role": "S", "text": "moli za nas!" },
-                { "role": "P", "text": "Ljubitelju siromaštva," },
-                { "role": "S", "text": "moli za nas!" },
-                { "role": "P", "text": "Uzor radnika," },
-                { "role": "S", "text": "moli za nas!" },
-                { "role": "P", "text": "Uraste domaćega života," },
-                { "role": "S", "text": "moli za nas!" },
-                { "role": "P", "text": "Čuvaru djevica," },
-                { "role": "S", "text": "moli za nas!" },
-                { "role": "P", "text": "Potporo obitelji," },
-                { "role": "S", "text": "moli za nas!" },
-                { "role": "P", "text": "Utjeho bijednih," },
-                { "role": "S", "text": "moli za nas!" },
-                { "role": "P", "text": "Ufanje bolesnih," },
-                { "role": "S", "text": "moli za nas!" },
-                { "role": "P", "text": "Zaštitniče umirućih," },
-                { "role": "S", "text": "moli za nas!" },
-                { "role": "P", "text": "Strahu zlih duhova," },
-                { "role": "S", "text": "moli za nas!" },
-                { "role": "P", "text": "Zaštitniče svete Crkve," },
-                { "role": "S", "text": "moli za nas!" },
-                { "role": "P", "text": "Jaganjče Božji, koji oduzimaš grijehe svijeta," },
-                { "role": "S", "text": "oprosti nam, Gospodine!" },
-                { "role": "P", "text": "Jaganjče Božji, koji oduzimaš grijehe svijeta," },
-                { "role": "S", "text": "usliši nas, Gospodine!" },
-                { "role": "P", "text": "Jaganjče Božji, koji oduzimaš grijehe svijeta," },
-                { "role": "S", "text": "smiluj nam se!" }
+                { "role": "P", "text": "Litanije svetog Josipa" }
               ]
             }
           ]
@@ -609,10 +613,10 @@
           "title": "Drugi dan",
           "theme": "Sveti Josip, pravedan muž",
           "sections": [
-            { "section": "uvodna_molitva", "repeat": 1, "verses": [{ "role": "P", "text": "O slavni sveti Josipe..." }] },
+            { "section": "uvodna_molitva", "repeat": 1, "verses": [{ "role": "P", "text": "O slavni sveti Josipe" }] },
             { "section": "dnevna_molitva", "repeat": 1, "verses": [{ "role": "P", "text": "Sveti Josipe, ti si bio pravedan u Božjim očima jer si srcem tražio Njegovu volju iznad svega. Nauči nas pravednosti koja izvire iz ljubavi i povjerenja u Boga, čak i kada ne razumijemo Njegove putove." }] },
-            { "section": "molitva_na_kraju", "repeat": 1, "verses": [{ "role": "S", "text": "Oče naš... Zdravo Marijo... Slava Ocu..." }] },
-            { "section": "litanije", "repeat": 1, "verses": [{ "role": "P", "text": "Litanije svetog Josipa..." }] }
+            { "section": "molitva_na_kraju", "repeat": 1, "verses": [{ "role": "S", "text": "Oče naš" }, { "role": "S", "text": "Zdravo Marijo" }, { "role": "S", "text": "Slava Ocu" }] },
+            { "section": "litanije", "repeat": 1, "verses": [{ "role": "P", "text": "Litanije svetog Josipa" }] }
           ]
         },
         {
@@ -620,10 +624,10 @@
           "title": "Treći dan",
           "theme": "Sveti Josip, čuvar čistoće",
           "sections": [
-            { "section": "uvodna_molitva", "repeat": 1, "verses": [{ "role": "P", "text": "O slavni sveti Josipe..." }] },
+            { "section": "uvodna_molitva", "repeat": 1, "verses": [{ "role": "P", "text": "O slavni sveti Josipe" }] },
             { "section": "dnevna_molitva", "repeat": 1, "verses": [{ "role": "P", "text": "Prečisti Josipe, ti si svoj život posvetio čuvanju onoga što je najsvetije. Izmoli nam čistoću misli i srca, da bismo mogli jasno vidjeti Boga i ljubiti druge nesebičnom ljubavlju." }] },
-            { "section": "molitva_na_kraju", "repeat": 1, "verses": [{ "role": "S", "text": "Oče naš... Zdravo Marijo... Slava Ocu..." }] },
-            { "section": "litanije", "repeat": 1, "verses": [{ "role": "P", "text": "Litanije svetog Josipa..." }] }
+            { "section": "molitva_na_kraju", "repeat": 1, "verses": [{ "role": "S", "text": "Oče naš" }, { "role": "S", "text": "Zdravo Marijo" }, { "role": "S", "text": "Slava Ocu" }] },
+            { "section": "litanije", "repeat": 1, "verses": [{ "role": "P", "text": "Litanije svetog Josipa" }] }
           ]
         },
         {
@@ -631,10 +635,10 @@
           "title": "Četvrti dan",
           "theme": "Sveti Josip, poslušni sluga",
           "sections": [
-            { "section": "uvodna_molitva", "repeat": 1, "verses": [{ "role": "P", "text": "O slavni sveti Josipe..." }] },
+            { "section": "uvodna_molitva", "repeat": 1, "verses": [{ "role": "P", "text": "O slavni sveti Josipe" }] },
             { "section": "dnevna_molitva", "repeat": 1, "verses": [{ "role": "P", "text": "Sveti Josipe, na svaku si Božju riječ odgovorio spremnom poslušnošću. Pomozi nam utišati glasove vlastitih želja kako bismo čuli Božji glas i hrabro ga slijedili kamo god nas vodio." }] },
-            { "section": "molitva_na_kraju", "repeat": 1, "verses": [{ "role": "S", "text": "Oče naš... Zdravo Marijo... Slava Ocu..." }] },
-            { "section": "litanije", "repeat": 1, "verses": [{ "role": "P", "text": "Litanije svetog Josipa..." }] }
+            { "section": "molitva_na_kraju", "repeat": 1, "verses": [{ "role": "S", "text": "Oče naš" }, { "role": "S", "text": "Zdravo Marijo" }, { "role": "S", "text": "Slava Ocu" }] },
+            { "section": "litanije", "repeat": 1, "verses": [{ "role": "P", "text": "Litanije svetog Josipa" }] }
           ]
         },
         {
@@ -642,10 +646,10 @@
           "title": "Peti dan",
           "theme": "Sveti Josip, uzor strpljivosti",
           "sections": [
-            { "section": "uvodna_molitva", "repeat": 1, "verses": [{ "role": "P", "text": "O slavni sveti Josipe..." }] },
+            { "section": "uvodna_molitva", "repeat": 1, "verses": [{ "role": "P", "text": "O slavni sveti Josipe" }] },
             { "section": "dnevna_molitva", "repeat": 1, "verses": [{ "role": "P", "text": "Sveti Josipe, ti si u tišini i strpljivosti nosio životne terete i neizvjesnosti. Izmoli nam milost strpljivosti sa samima sobom i s drugima, vjerujući da Bog sve okreće na dobro onima koji ga ljube." }] },
-            { "section": "molitva_na_kraju", "repeat": 1, "verses": [{ "role": "S", "text": "Oče naš... Zdravo Marijo... Slava Ocu..." }] },
-            { "section": "litanije", "repeat": 1, "verses": [{ "role": "P", "text": "Litanije svetog Josipa..." }] }
+            { "section": "molitva_na_kraju", "repeat": 1, "verses": [{ "role": "S", "text": "Oče naš" }, { "role": "S", "text": "Zdravo Marijo" }, { "role": "S", "text": "Slava Ocu" }] },
+            { "section": "litanije", "repeat": 1, "verses": [{ "role": "P", "text": "Litanije svetog Josipa" }] }
           ]
         },
         {
@@ -653,10 +657,10 @@
           "title": "Šesti dan",
           "theme": "Sveti Josip, ljubitelj siromaštva",
           "sections": [
-            { "section": "uvodna_molitva", "repeat": 1, "verses": [{ "role": "P", "text": "O slavni sveti Josipe..." }] },
+            { "section": "uvodna_molitva", "repeat": 1, "verses": [{ "role": "P", "text": "O slavni sveti Josipe" }] },
             { "section": "dnevna_molitva", "repeat": 1, "verses": [{ "role": "P", "text": "Sveti Josipe, ti si bogatstvo našao u Isusu i Mariji, a ne u prolaznim dobrima. Uči nas cijeniti duhovna bogatstva i oslobodi nas navezanosti na stvari, kako bi naše srce bilo slobodno za Boga." }] },
-            { "section": "molitva_na_kraju", "repeat": 1, "verses": [{ "role": "S", "text": "Oče naš... Zdravo Marijo... Slava Ocu..." }] },
-            { "section": "litanije", "repeat": 1, "verses": [{ "role": "P", "text": "Litanije svetog Josipa..." }] }
+            { "section": "molitva_na_kraju", "repeat": 1, "verses": [{ "role": "S", "text": "Oče naš" }, { "role": "S", "text": "Zdravo Marijo" }, { "role": "S", "text": "Slava Ocu" }] },
+            { "section": "litanije", "repeat": 1, "verses": [{ "role": "P", "text": "Litanije svetog Josipa" }] }
           ]
         },
         {
@@ -664,10 +668,10 @@
           "title": "Sedmi dan",
           "theme": "Sveti Josip, potpora obitelji",
           "sections": [
-            { "section": "uvodna_molitva", "repeat": 1, "verses": [{ "role": "P", "text": "O slavni sveti Josipe..." }] },
+            { "section": "uvodna_molitva", "repeat": 1, "verses": [{ "role": "P", "text": "O slavni sveti Josipe" }] },
             { "section": "dnevna_molitva", "repeat": 1, "verses": [{ "role": "P", "text": "Zaštitniče Svete obitelji, čuvaj naše obitelji. Izmoli nam duh zajedništva, praštanja i međusobne ljubavi. Neka naši domovi budu mjesta susreta s Bogom i oaze mira u ovom nemirnom svijetu." }] },
-            { "section": "molitva_na_kraju", "repeat": 1, "verses": [{ "role": "S", "text": "Oče naš... Zdravo Marijo... Slava Ocu..." }] },
-            { "section": "litanije", "repeat": 1, "verses": [{ "role": "P", "text": "Litanije svetog Josipa..." }] }
+            { "section": "molitva_na_kraju", "repeat": 1, "verses": [{ "role": "S", "text": "Oče naš" }, { "role": "S", "text": "Zdravo Marijo" }, { "role": "S", "text": "Slava Ocu" }] },
+            { "section": "litanije", "repeat": 1, "verses": [{ "role": "P", "text": "Litanije svetog Josipa" }] }
           ]
         },
         {
@@ -675,10 +679,10 @@
           "title": "Osmi dan",
           "theme": "Sveti Josip, ufanje bolesnih",
           "sections": [
-            { "section": "uvodna_molitva", "repeat": 1, "verses": [{ "role": "P", "text": "O slavni sveti Josipe..." }] },
+            { "section": "uvodna_molitva", "repeat": 1, "verses": [{ "role": "P", "text": "O slavni sveti Josipe" }] },
             { "section": "dnevna_molitva", "repeat": 1, "verses": [{ "role": "P", "text": "Sveti Josipe, tvojoj brizi povjeravamo sve bolesne i trpeće. Izmoli im snagu u kušnjama, utjehu u boli i, ako je Božja volja, ozdravljenje tijela i duha." }] },
-            { "section": "molitva_na_kraju", "repeat": 1, "verses": [{ "role": "S", "text": "Oče naš... Zdravo Marijo... Slava Ocu..." }] },
-            { "section": "litanije", "repeat": 1, "verses": [{ "role": "P", "text": "Litanije svetog Josipa..." }] }
+            { "section": "molitva_na_kraju", "repeat": 1, "verses": [{ "role": "S", "text": "Oče naš" }, { "role": "S", "text": "Zdravo Marijo" }, { "role": "S", "text": "Slava Ocu" }] },
+            { "section": "litanije", "repeat": 1, "verses": [{ "role": "P", "text": "Litanije svetog Josipa" }] }
           ]
         },
         {
@@ -686,10 +690,10 @@
           "title": "Deveti dan",
           "theme": "Sveti Josip, zaštitnik Crkve",
           "sections": [
-            { "section": "uvodna_molitva", "repeat": 1, "verses": [{ "role": "P", "text": "O slavni sveti Josipe..." }] },
+            { "section": "uvodna_molitva", "repeat": 1, "verses": [{ "role": "P", "text": "O slavni sveti Josipe" }] },
             { "section": "dnevna_molitva", "repeat": 1, "verses": [{ "role": "P", "text": "Slavni zaštitniče svete Crkve, tebi povjeravamo cijeli Božji narod. Čuvaj nas od svih zala, vodi nas putem svetosti i pomozi nam da hrabro svjedočimo za Krista u današnjem vremenu." }] },
-            { "section": "molitva_na_kraju", "repeat": 1, "verses": [{ "role": "S", "text": "Oče naš... Zdravo Marijo... Slava Ocu..." }] },
-            { "section": "litanije", "repeat": 1, "verses": [{ "role": "P", "text": "Litanije svetog Josipa..." }] }
+            { "section": "molitva_na_kraju", "repeat": 1, "verses": [{ "role": "S", "text": "Oče naš" }, { "role": "S", "text": "Zdravo Marijo" }, { "role": "S", "text": "Slava Ocu" }] },
+            { "section": "litanije", "repeat": 1, "verses": [{ "role": "P", "text": "Litanije svetog Josipa" }] }
           ]
         }
       ]
@@ -720,7 +724,15 @@
               "verses": [
                 {
                   "role": "S",
-                  "text": "Oče naš… Zdravo, Marijo… Slava Ocu…"
+                  "text": "Oče naš"
+                },
+                {
+                  "role": "S",
+                  "text": "Zdravo Marijo"
+                },
+                {
+                  "role": "S",
+                  "text": "Slava Ocu"
                 }
               ]
             }
@@ -746,7 +758,15 @@
               "verses": [
                 {
                   "role": "S",
-                  "text": "Oče naš… Zdravo, Marijo… Slava Ocu…"
+                  "text": "Oče naš"
+                },
+                {
+                  "role": "S",
+                  "text": "Zdravo Marijo"
+                },
+                {
+                  "role": "S",
+                  "text": "Slava Ocu"
                 }
               ]
             }
@@ -772,7 +792,15 @@
               "verses": [
                 {
                   "role": "S",
-                  "text": "Oče naš… Zdravo, Marijo… Slava Ocu…"
+                  "text": "Oče naš"
+                },
+                {
+                  "role": "S",
+                  "text": "Zdravo Marijo"
+                },
+                {
+                  "role": "S",
+                  "text": "Slava Ocu"
                 }
               ]
             }
@@ -798,7 +826,15 @@
               "verses": [
                 {
                   "role": "S",
-                  "text": "Oče naš… Zdravo, Marijo… Slava Ocu…"
+                  "text": "Oče naš"
+                },
+                {
+                  "role": "S",
+                  "text": "Zdravo Marijo"
+                },
+                {
+                  "role": "S",
+                  "text": "Slava Ocu"
                 }
               ]
             }
@@ -824,7 +860,15 @@
               "verses": [
                 {
                   "role": "S",
-                  "text": "Oče naš… Zdravo, Marijo… Slava Ocu…"
+                  "text": "Oče naš"
+                },
+                {
+                  "role": "S",
+                  "text": "Zdravo Marijo"
+                },
+                {
+                  "role": "S",
+                  "text": "Slava Ocu"
                 }
               ]
             }
@@ -850,7 +894,15 @@
               "verses": [
                 {
                   "role": "S",
-                  "text": "Oče naš… Zdravo, Marijo… Slava Ocu…"
+                  "text": "Oče naš"
+                },
+                {
+                  "role": "S",
+                  "text": "Zdravo Marijo"
+                },
+                {
+                  "role": "S",
+                  "text": "Slava Ocu"
                 }
               ]
             }
@@ -876,7 +928,15 @@
               "verses": [
                 {
                   "role": "S",
-                  "text": "Očenaš… Zdravo, Marijo… Slava Ocu…"
+                  "text": "Oče naš"
+                },
+                {
+                  "role": "S",
+                  "text": "Zdravo Marijo"
+                },
+                {
+                  "role": "S",
+                  "text": "Slava Ocu"
                 }
               ]
             }
@@ -902,7 +962,15 @@
               "verses": [
                 {
                   "role": "S",
-                  "text": "Oče naš… Zdravo, Marijo… Slava Ocu…"
+                  "text": "Oče naš"
+                },
+                {
+                  "role": "S",
+                  "text": "Zdravo Marijo"
+                },
+                {
+                  "role": "S",
+                  "text": "Slava Ocu"
                 }
               ]
             }
@@ -928,7 +996,15 @@
               "verses": [
                 {
                   "role": "S",
-                  "text": "Oče naš… Zdravo, Marijo… Slava Ocu…"
+                  "text": "Oče naš"
+                },
+                {
+                  "role": "S",
+                  "text": "Zdravo Marijo"
+                },
+                {
+                  "role": "S",
+                  "text": "Slava Ocu"
                 }
               ]
             }

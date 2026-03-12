@@ -6,9 +6,10 @@ interface PrayerCardProps {
   prayer: Prayer;
   commonOpening: string[];
   commonPrayers: Record<string, string | Verse[]>;
+  litanies: Record<string, Verse[]>;
 }
 
-const PrayerCard: React.FC<PrayerCardProps> = ({ prayer, commonOpening, commonPrayers }) => {
+const PrayerCard: React.FC<PrayerCardProps> = ({ prayer, commonOpening, commonPrayers, litanies }) => {
   const renderCommonPrayerText = (p: string) => {
     const cp = commonPrayers[p];
     if (!cp) return null;
@@ -49,27 +50,34 @@ const PrayerCard: React.FC<PrayerCardProps> = ({ prayer, commonOpening, commonPr
         </p>
       </header>
 
-      <section className="bg-indigo-50/50 rounded-2xl p-6 border border-indigo-100 shadow-sm">
-        <h3 className="text-indigo-800 font-bold mb-4 flex items-center gap-2">
-          <span className="w-2 h-2 bg-indigo-500 rounded-full"></span>
-          Uvodne molitve
-        </h3>
-        <div className="space-y-4">
-          {commonOpening.map((p, i) => (
-            <div key={i} className="text-gray-700">
-              <div className="flex items-center gap-3 font-bold text-indigo-900 mb-1">
-                <span className="text-indigo-300 font-serif">†</span>
-                {p}
+      {commonOpening && commonOpening.length > 0 && (
+        <section className="bg-indigo-50/50 rounded-2xl p-6 border border-indigo-100 shadow-sm">
+          <h3 className="text-indigo-800 font-bold mb-4 flex items-center gap-2">
+            <span className="w-2 h-2 bg-indigo-500 rounded-full"></span>
+            Uvodne molitve
+          </h3>
+          <div className="space-y-4">
+            {commonOpening.map((p, i) => (
+              <div key={i} className="text-gray-700">
+                <div className="flex items-center gap-3 font-bold text-indigo-900 mb-1">
+                  <span className="text-indigo-300 font-serif">†</span>
+                  {p}
+                </div>
+                {renderCommonPrayerText(p)}
               </div>
-              {renderCommonPrayerText(p)}
-            </div>
-          ))}
-        </div>
-      </section>
+            ))}
+          </div>
+        </section>
+      )}
 
       <div className="space-y-4">
         {prayer.sections.map((section, idx) => (
-          <PrayerSection key={idx} section={section} commonPrayers={commonPrayers} />
+          <PrayerSection 
+            key={idx} 
+            section={section} 
+            commonPrayers={commonPrayers} 
+            litanies={litanies} 
+          />
         ))}
       </div>
 

@@ -5,9 +5,10 @@ import PrayerVerse from './PrayerVerse';
 interface PrayerSectionProps {
   section: Section;
   commonPrayers?: Record<string, string | Verse[]>;
+  litanies?: Record<string, Verse[]>;
 }
 
-const PrayerSection: React.FC<PrayerSectionProps> = ({ section, commonPrayers }) => {
+const PrayerSection: React.FC<PrayerSectionProps> = ({ section, commonPrayers, litanies }) => {
   const getSectionTitle = (type: string) => {
     switch (type) {
       case 'velika_zrnca': return 'Velika zrnca';
@@ -36,7 +37,12 @@ const PrayerSection: React.FC<PrayerSectionProps> = ({ section, commonPrayers })
       </div>
       <div className="space-y-1">
         {section.verses.map((verse, idx) => (
-          <PrayerVerse key={idx} verse={verse} commonPrayers={commonPrayers} />
+          <PrayerVerse 
+            key={idx} 
+            verse={verse} 
+            commonPrayers={commonPrayers} 
+            litanies={litanies} 
+          />
         ))}
       </div>
     </div>

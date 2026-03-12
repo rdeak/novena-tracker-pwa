@@ -1,63 +1,60 @@
 import React, { useState } from 'react';
-import { PrayerCycle } from '../../types/prayer';
+import { PrayerLibraryItem } from '../../types/prayer';
 
 interface HeaderProps {
-  title: string;
-  cycles: PrayerCycle[];
-  currentCycleId: string;
-  onCycleChange: (id: string) => void;
+  currentPage: 'weekly' | 'novena';
+  onPageChange: (page: 'weekly' | 'novena') => void;
+  onHomeClick: () => void;
 }
 
-const Header: React.FC<HeaderProps> = ({ title, cycles, currentCycleId, onCycleChange }) => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+const Header: React.FC<HeaderProps> = ({ 
+  currentPage, 
+  onPageChange,
+  onHomeClick
+}) => {
+  const formattedDate = new Intl.DateTimeFormat('hr-HR', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric'
+  }).format(new Date());
 
   return (
     <header className="bg-white/80 backdrop-blur-md border-b border-gray-100 sticky top-0 z-30 safe-top">
-      <div className="container mx-auto px-6 h-16 flex items-center justify-between">
-        <div className="relative">
+      <div className="container mx-auto px-6">
+        <div className="h-16 flex items-center justify-between">
           <button 
-            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-            className="flex items-center gap-2 text-xl font-black text-indigo-600 tracking-tight hover:opacity-80 transition-opacity"
+            onClick={onHomeClick}
+            className="flex flex-col text-left focus:outline-none"
           >
-            {title}
-            <svg xmlns="http://www.w3.org/2000/svg" className={`h-5 w-5 transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} viewBox="0 0 20 20" fill="currentColor">
-              <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-            </svg>
+            <h1 className="text-xl font-black text-indigo-600 tracking-tight leading-tight">
+              Molitveni Dnevnik
+            </h1>
+            <span className="text-xs font-medium text-gray-400">
+              {formattedDate}
+            </span>
           </button>
-
-          {isDropdownOpen && (
-            <>
-              <div 
-                className="fixed inset-0 z-10" 
-                onClick={() => setIsDropdownOpen(false)}
-              ></div>
-              <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-gray-100 py-2 z-20 overflow-hidden">
-                {cycles.map(cycle => (
-                  <button
-                    key={cycle.id}
-                    onClick={() => {
-                      onCycleChange(cycle.id);
-                      setIsDropdownOpen(false);
-                    }}
-                    className={`w-full text-left px-4 py-3 text-sm font-bold transition-colors ${
-                      currentCycleId === cycle.id 
-                        ? 'bg-indigo-50 text-indigo-600' 
-                        : 'text-gray-600 hover:bg-gray-50'
-                    }`}
-                  >
-                    {cycle.title}
-                  </button>
-                ))}
-              </div>
-            </>
-          )}
         </div>
 
-        <div className="flex items-center gap-4">
-          <button className="text-gray-400 hover:text-indigo-600 transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
+        <div className="flex gap-8 pb-1">
+          <button 
+            onClick={() => onPageChange('weekly')}
+            className={`pb-2 text-sm font-bold transition-all border-b-2 ${
+              currentPage === 'weekly' 
+                ? 'text-indigo-600 border-indigo-600' 
+                : 'text-gray-400 border-transparent hover:text-gray-600'
+            }`}
+          >
+            Tjedne molitve
+          </button>
+          <button 
+            onClick={() => onPageChange('novena')}
+            className={`pb-2 text-sm font-bold transition-all border-b-2 ${
+              currentPage === 'novena' 
+                ? 'text-indigo-600 border-indigo-600' 
+                : 'text-gray-400 border-transparent hover:text-gray-600'
+            }`}
+          >
+            Devetnice
           </button>
         </div>
       </div>
