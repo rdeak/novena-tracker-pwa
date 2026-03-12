@@ -1,0 +1,440 @@
+{
+  "title": "Krunice — Tjedni molitveni ciklus",
+  "source": {
+    "publisher": "Družba Misionara Krvi Kristove",
+    "contact": "Ilija Grgić, CPPS",
+    "address": "Razgled 3, HR-10000 Zagreb",
+    "phone": "+385 1 45 00 130",
+    "fax": "+385 1 45 00 134",
+    "email": "epps.zagreb@post.t-com.hr",
+    "website": "www.cpps.hr",
+    "year": 2018,
+    "imprimatur": {
+      "authority": "Nadbiskupski duhovni stol, Zagreb",
+      "reference": "3180/2006"
+    }
+  },
+  "roles": {
+    "P": "Predvoditelj (leader)",
+    "S": "Svi (all / response)"
+  },
+  "commonOpening": [
+    "Oče naš",
+    "Zdravo Marijo",
+    "Vjerovanje"
+  ],
+  "prayers": [
+    {
+      "day": "Ponedjeljak",
+      "dayIndex": 1,
+      "title": "Krunica poniznosti",
+      "theme": "Poniznost",
+      "opening": "commonOpening",
+      "sections": [
+        {
+          "section": "velika_zrnca",
+          "repeat": 1,
+          "verses": [
+            {
+              "role": "P",
+              "text": "Slavim te, Oče, Gospodaru neba i zemlje što si ovo sakrio od mudrih i umnih,"
+            },
+            {
+              "role": "S",
+              "text": "a objavio malenima."
+            }
+          ],
+          "reference": "Mt 11,25"
+        },
+        {
+          "section": "mala_zrnca",
+          "repeat": 10,
+          "verses": [
+            {
+              "role": "P",
+              "text": "Isuse blaga i ponizna Srca –"
+            },
+            {
+              "role": "S",
+              "text": "učini srca naša po Srcu svome!"
+            }
+          ]
+        },
+        {
+          "section": "završetak",
+          "repeat": 1,
+          "verses": [
+            {
+              "role": "P",
+              "text": "Dođite k meni svi koji ste izmoreni i opterećeni"
+            },
+            {
+              "role": "S",
+              "text": "i ja ću vas odmoriti."
+            },
+            {
+              "role": "P",
+              "text": "Uzmite jaram moj na sebe, učite se od mene jer sam krotka i ponizna srca"
+            },
+            {
+              "role": "S",
+              "text": "i naći ćete spokoj dušama svojim."
+            },
+            {
+              "role": "P",
+              "text": "Uistinu, jaram je moj sladak"
+            },
+            {
+              "role": "S",
+              "text": "i breme moje lako."
+            }
+          ],
+          "reference": "Mt 11,28-30"
+        }
+      ]
+    },
+    {
+      "day": "Utorak",
+      "dayIndex": 2,
+      "title": "Krunica anđelima čuvarima",
+      "theme": "Anđeli čuvari",
+      "opening": "commonOpening",
+      "sections": [
+        {
+          "section": "velika_zrnca",
+          "repeat": 1,
+          "verses": [
+            {
+              "role": "P",
+              "text": "Slava Ocu i Sinu i Duhu Svetomu –"
+            },
+            {
+              "role": "S",
+              "text": "u anđelima čuvarima svih ljudi na svijetu."
+            }
+          ]
+        },
+        {
+          "section": "mala_zrnca",
+          "repeat": 10,
+          "verses": [
+            {
+              "role": "P",
+              "text": "Blagoslovljen budi Bog –"
+            },
+            {
+              "role": "S",
+              "text": "u anđelima čuvarima svih ljudi na svijetu."
+            }
+          ]
+        },
+        {
+          "section": "završetak",
+          "repeat": 3,
+          "verses": [
+            {
+              "role": "S",
+              "text": "Po zagovoru anđela čuvara svih ljudi na svijetu,"
+            },
+            {
+              "role": "P",
+              "text": "Gospodaru neba i zemlje, smiluj se nama i cijelome svijetu."
+            }
+          ]
+        }
+      ],
+      "additionalPrayer": {
+        "title": "Molitva svetom Mihaelu arkanđelu",
+        "attribution": "Papa Lav XIII.",
+        "text": "Sveti Mihaele arkanđele, brani nas u boju; protiv pakosti i zasjeda đavolskih budi nam zaklon! Neka mu Bog zapovijedi, ponizno molimo, i ti, vojvodo vojske nebeske, Sotonu i druge zle duhove koji svijetom obilaze na propast duša božanskom jakošću u pakao protjeraj! Amen."
+      }
+    },
+    {
+      "day": "Srijeda",
+      "dayIndex": 3,
+      "title": "Krunica za čistoću",
+      "theme": "Čistoća",
+      "opening": "commonOpening",
+      "sections": [
+        {
+          "section": "velika_zrnca",
+          "repeat": 1,
+          "verses": [
+            {
+              "role": "P",
+              "text": "Blago čistima srcem:"
+            },
+            {
+              "role": "S",
+              "text": "oni će Boga gledati!"
+            }
+          ],
+          "reference": "Mt 5,8"
+        },
+        {
+          "section": "mala_zrnca",
+          "repeat": 10,
+          "verses": [
+            {
+              "role": "P",
+              "text": "Marijo, Prečista Djevice –"
+            },
+            {
+              "role": "S",
+              "text": "budi nam uzor i pomoć!"
+            }
+          ]
+        },
+        {
+          "section": "završetak",
+          "repeat": 1,
+          "verses": [
+            {
+              "role": "P",
+              "text": "Čisto srce stvori mi, Bože –"
+            },
+            {
+              "role": "S",
+              "text": "i ispuni me svojom ljubavlju."
+            },
+            {
+              "role": "P",
+              "text": "Bezgrešno Srce Marijino,"
+            },
+            {
+              "role": "S",
+              "text": "budi naše utočište, zaštita i mjesto pripreme za borbu s nečistim dusima. Amen."
+            }
+          ]
+        }
+      ],
+      "additionalPrayer": {
+        "title": "Molitva svetom Josipu",
+        "text": "Sveti Josipe, čuvaru djevica, u tvojoj čistoći i predanju Bogu štitio si nekad Svetu obitelj, a sada si zaštitnik cijele Crkve. Pouzdajemo se u te i molimo pomoć u borbi za čistoću srca. Amen."
+      }
+    },
+    {
+      "day": "Četvrtak",
+      "dayIndex": 4,
+      "title": "Krunica za zvanja",
+      "theme": "Duhovna zvanja",
+      "opening": "commonOpening",
+      "sections": [
+        {
+          "section": "velika_zrnca",
+          "repeat": 1,
+          "verses": [
+            {
+              "role": "P",
+              "text": "Žetve je mnogo, a radnika malo."
+            },
+            {
+              "role": "S",
+              "text": "Molite dakle gospodara žetve da pošalje radnike u žetvu svoju."
+            }
+          ],
+          "reference": "Mt 9,37-38"
+        },
+        {
+          "section": "mala_zrnca",
+          "repeat": 10,
+          "verses": [
+            {
+              "role": "P",
+              "text": "Hoće li tko za mnom, neka se odrekne samoga sebe,"
+            },
+            {
+              "role": "S",
+              "text": "neka uzme svoj križ i neka ide za mnom."
+            }
+          ],
+          "reference": "Mt 16,24"
+        },
+        {
+          "section": "završetak",
+          "repeat": 1,
+          "verses": [
+            {
+              "role": "P",
+              "text": "Ne izabraste vi mene nego ja izabrah vas i postavili vas da idete i rod donosite i rod vaš da ostane"
+            },
+            {
+              "role": "S",
+              "text": "te vam Otac dadne što ga god zaištete u moje ime."
+            }
+          ],
+          "reference": "Iv 15,16"
+        }
+      ],
+      "additionalPrayer": {
+        "text": "Marijo Majko Crkve, u velikoj potrebi duhovnih zvanja, zagovaraj nas kod svoga Sina Isusa Krista našeg velikog svećenika. Amen."
+      }
+    },
+    {
+      "day": "Petak",
+      "dayIndex": 5,
+      "title": "Krunica Božanskog milosrđa",
+      "theme": "Božansko milosrđe",
+      "opening": "commonOpening",
+      "sections": [
+        {
+          "section": "velika_zrnca",
+          "repeat": 1,
+          "verses": [
+            {
+              "role": "P",
+              "text": "Vječni Oče, prikazujem Ti Tijelo i Krv, Dušu i Božanstvo Tvoga preljubljenoga Sina, Gospodina našega Isusa Krista,"
+            },
+            {
+              "role": "S",
+              "text": "kao zadovoljštinu za grijehe naše i grijehe cijeloga svijeta."
+            }
+          ]
+        },
+        {
+          "section": "mala_zrnca",
+          "repeat": 10,
+          "verses": [
+            {
+              "role": "P",
+              "text": "Po pregorkoj Muci Isusovoj,"
+            },
+            {
+              "role": "S",
+              "text": "budi milosrdan nama i cijelome svijetu."
+            }
+          ]
+        },
+        {
+          "section": "završetak",
+          "repeat": 3,
+          "verses": [
+            {
+              "role": "S",
+              "text": "Sveti Bože, Sveti Jaki Bože, Sveti Besmrtni Bože, smiluj se nama i cijelome svijetu."
+            }
+          ]
+        }
+      ],
+      "additionalPrayer": {
+        "text": "Isuse, ja se uzdam u Tebe! O Krvi i Vodo koja si potekla iz probodenog Srca Isusova kao izvor milosrđa za nas, uzdamo se u Te!"
+      }
+    },
+    {
+      "day": "Subota",
+      "dayIndex": 6,
+      "title": "Krunica pobjede",
+      "theme": "Pobjeda Kristove Krvi",
+      "opening": "commonOpening",
+      "sections": [
+        {
+          "section": "velika_zrnca",
+          "repeat": 1,
+          "verses": [
+            {
+              "role": "P",
+              "text": "Ali oni ga pobijedše krvlju Jaganjčevom"
+            },
+            {
+              "role": "S",
+              "text": "i riječju svojega svjedočanstva"
+            }
+          ],
+          "reference": "Otk 12,11"
+        },
+        {
+          "section": "mala_zrnca",
+          "repeat": 10,
+          "verses": [
+            {
+              "role": "P",
+              "text": "Krvi Kristova, pobjednice zlih duhova,"
+            },
+            {
+              "role": "S",
+              "text": "spasi nas!"
+            }
+          ]
+        },
+        {
+          "section": "završetak",
+          "repeat": null,
+          "verses": [
+            {
+              "role": "S",
+              "text": "Vječni Oče, prikazujemo Ti Predragocjenu Krv Isusa Krista kao zadovoljštinu za svoje grijehe, na utjehu duša u čistilištu i za potrebe svete Crkve. Amen.",
+              "repeat": 1
+            },
+            {
+              "role": "P",
+              "text": "Hvaljen i slavljen uvijek bio Isus! –"
+            },
+            {
+              "role": "S",
+              "text": "koji nas je otkupio svojom Krvlju!",
+              "repeat": 3
+            }
+          ]
+        }
+      ],
+      "additionalPrayer": {
+        "attribution": "Majka Basilea Schlink",
+        "text": "Klanjam se Krvi Jaganjca Božjeg: zbog njene moći koja oslobađa, zbog njene moći koja pobjeđuje..."
+      }
+    },
+    {
+      "day": "Nedjelja",
+      "dayIndex": 0,
+      "title": "Krunica ljubavi",
+      "theme": "Ljubav",
+      "opening": "commonOpening",
+      "sections": [
+        {
+          "section": "velika_zrnca",
+          "repeat": 1,
+          "verses": [
+            {
+              "role": "P",
+              "text": "Kao što je Otac ljubio mene tako sam i ja ljubio vas; ostanite u mojoj ljubavi."
+            },
+            {
+              "role": "S",
+              "text": "Budete li čuvali moje zapovijedi, ostat ćete u mojoj ljubavi."
+            }
+          ],
+          "reference": "Iv 15,9-10a"
+        },
+        {
+          "section": "mala_zrnca",
+          "repeat": 10,
+          "verses": [
+            {
+              "role": "P",
+              "text": "Ovo je moja zapovijed: ljubite jedni druge"
+            },
+            {
+              "role": "S",
+              "text": "kao što sam ja vas ljubio!"
+            }
+          ],
+          "reference": "Iv 15,12"
+        },
+        {
+          "section": "završetak",
+          "repeat": 1,
+          "verses": [
+            {
+              "role": "P",
+              "text": "Ljubi Gospodina Boga svojega iz svega srca svoga, i svom dušom svojom, i svom snagom svojom, i svim umom svojim;"
+            },
+            {
+              "role": "S",
+              "text": "i svoga bližnjega kao sebe samoga!"
+            }
+          ],
+          "reference": "Lk 10,27"
+        }
+      ]
+    }
+  ]
+}
