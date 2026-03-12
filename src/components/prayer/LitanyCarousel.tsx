@@ -35,17 +35,17 @@ const LitanyCarousel: React.FC<LitanyCarouselProps> = ({ verses, title }) => {
   return (
     <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-indigo-100 shadow-sm transition-all duration-300">
       <div className="flex justify-between items-center mb-6">
-        <h5 className="font-bold text-indigo-900 text-sm tracking-wide uppercase">{title}</h5>
-        <span className="text-xs font-medium text-indigo-400 bg-indigo-50 px-2.5 py-1 rounded-full border border-indigo-100/50 shadow-sm tabular-nums">
+        <h5 className="font-bold text-indigo-400/80 text-sm tracking-wide uppercase">{title}</h5>
+        <span className="text-xs font-medium text-indigo-300/70 bg-indigo-50/50 px-2.5 py-1 rounded-full border border-indigo-100/50 shadow-sm tabular-nums">
           {currentIndex + 1} / {pairs.length}
         </span>
       </div>
 
       <div className="relative overflow-hidden min-h-[160px] flex items-center justify-center py-4">
         <div key={currentIndex} className="w-full animate-in fade-in slide-in-from-right-4 duration-300">
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-8">
             {currentPair.map((verse, idx) => (
-              <div key={idx} className="flex flex-col gap-2">
+              <div key={idx} className="flex flex-col gap-3">
                 <div className="flex gap-4 items-start">
                   <span className={`font-black text-lg min-w-[1.5rem] mt-0.5 ${verse.role === 'P' ? 'text-indigo-600' : 'text-emerald-600'}`}>
                     {verse.role}:

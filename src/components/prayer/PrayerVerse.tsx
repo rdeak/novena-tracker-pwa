@@ -23,7 +23,7 @@ const PrayerVerse: React.FC<PrayerVerseProps> = ({ verse, commonPrayers, litanie
           <span>
             <span className="font-bold">{text}</span>
             <br />
-            <span className="text-sm italic text-gray-500">{commonPrayer}</span>
+            <span className="text-base italic text-gray-500">{commonPrayer}</span>
           </span>
         );
       } else {
@@ -31,9 +31,9 @@ const PrayerVerse: React.FC<PrayerVerseProps> = ({ verse, commonPrayers, litanie
         return (
           <span>
             <span className="font-bold mb-1 block">{text}</span>
-            <div className="pl-4 border-l-2 border-indigo-50 space-y-1">
+            <div className="pl-4 border-l-2 border-indigo-50 space-y-2">
               {commonPrayer.map((v, i) => (
-                <div key={i} className="text-sm leading-relaxed">
+                <div key={i} className="text-base sm:text-lg leading-relaxed">
                   <span className={`font-bold mr-2 ${v.role === 'P' ? 'text-indigo-600/70' : 'text-emerald-600/70'}`}>
                     {v.role}:
                   </span>
@@ -106,16 +106,16 @@ const PrayerVerse: React.FC<PrayerVerseProps> = ({ verse, commonPrayers, litanie
   };
 
   return (
-    <div className={`${litany ? 'w-full' : 'flex gap-3 text-sm sm:text-base leading-relaxed'} mb-2 last:mb-0`}>
+    <div className={`${litany ? 'w-full' : 'flex gap-3 text-lg sm:text-xl md:text-2xl leading-relaxed'} mb-4 last:mb-0`}>
       {!litany && showRole && (
-        <span className={`font-bold min-w-[1.25rem] ${verse.role === 'P' ? 'text-indigo-600' : 'text-emerald-600'}`}>
+        <span className={`font-bold min-w-[1.5rem] mt-0.5 ${verse.role === 'P' ? 'text-indigo-600' : 'text-emerald-600'}`}>
           {verse.role}:
         </span>
       )}
       <div className={`${litany ? 'w-full' : 'flex-grow text-gray-700'}`}>
         {renderTextWithCommonPrayers(verse.text)}
         {!litany && verse.repeat && verse.repeat > 1 && (
-          <span className="ml-2 font-medium text-gray-400 italic">({verse.repeat}x)</span>
+          <span className="ml-2 font-medium text-gray-400 italic text-base sm:text-lg">({verse.repeat}x)</span>
         )}
       </div>
     </div>

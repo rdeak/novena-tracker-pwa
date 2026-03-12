@@ -13,7 +13,7 @@ const PrayerCard: React.FC<PrayerCardProps> = ({ prayer, commonPrayers, litanies
     <div className="flex flex-col gap-6 w-full max-w-2xl mx-auto pb-12">
       <header className="text-center px-4">
         {prayer.day && (
-          <div className="text-indigo-600 font-bold text-sm tracking-widest uppercase mb-1">
+          <div className="text-indigo-400/70 font-bold text-sm tracking-widest uppercase mb-1">
             {prayer.day}
           </div>
         )}
@@ -27,7 +27,7 @@ const PrayerCard: React.FC<PrayerCardProps> = ({ prayer, commonPrayers, litanies
         )}
       </header>
 
-      <div className="space-y-4">
+      <div className="space-y-8">
         {prayer.sections.map((section, idx) => (
           <PrayerSection 
             key={idx} 
