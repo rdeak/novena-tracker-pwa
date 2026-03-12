@@ -1,8 +1,7 @@
 import React from 'react';
+import { useStore } from '../../store/useStore';
 
 interface FooterProps {
-  currentDay: number;
-  onDayChange: (day: number) => void;
   type: 'weekly' | 'novena';
   totalDays: number;
 }
@@ -17,7 +16,8 @@ const weeklyDays = [
   { label: 'S', value: 6 },
 ];
 
-const Footer: React.FC<FooterProps> = ({ currentDay, onDayChange, type, totalDays }) => {
+const Footer: React.FC<FooterProps> = ({ type, totalDays }) => {
+  const { currentDayIndex, setCurrentDayIndex } = useStore();
   const items = type === 'weekly' 
     ? weeklyDays 
     : Array.from({ length: totalDays }, (_, i) => ({ label: (i + 1).toString(), value: i + 1 }));
@@ -28,10 +28,10 @@ const Footer: React.FC<FooterProps> = ({ currentDay, onDayChange, type, totalDay
         {items.map((item) => (
           <button
             key={item.value}
-            onClick={() => onDayChange(item.value)}
+            onClick={() => setCurrentDayIndex(item.value)}
             className={`
               flex-shrink-0 flex flex-col items-center justify-center w-10 h-10 rounded-full transition-all duration-200
-              ${currentDay === item.value 
+              ${currentDayIndex === item.value 
                 ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-200 scale-110' 
                 : 'text-gray-400 hover:bg-gray-50'}
             `}

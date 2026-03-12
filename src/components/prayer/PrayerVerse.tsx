@@ -63,7 +63,7 @@ const PrayerVerse: React.FC<PrayerVerseProps> = ({ verse, commonPrayers, litanie
     }
 
     // Split by common prayer names and highlight them if they are in the text
-    const commonPrayerNames = Object.keys(commonPrayers);
+    const commonPrayerNames = commonPrayers ? Object.keys(commonPrayers) : [];
     const litanyNames = litanies ? Object.keys(litanies) : [];
     const allNames = [...commonPrayerNames, ...litanyNames];
 
@@ -86,7 +86,7 @@ const PrayerVerse: React.FC<PrayerVerseProps> = ({ verse, commonPrayers, litanie
         const segments = part.split(regex);
         segments.forEach((seg, i) => {
           if (seg === name) {
-            const cp = commonPrayers[name] || (litanies ? litanies[name] : null);
+            const cp = (commonPrayers ? commonPrayers[name] : null) || (litanies ? litanies[name] : null);
             if (!cp) {
               newParts.push(seg);
               return;

@@ -1,17 +1,9 @@
-import React, { useState } from 'react';
-import { PrayerLibraryItem } from '../../types/prayer';
+import React from 'react';
+import { useStore } from '../../store/useStore';
 
-interface HeaderProps {
-  currentPage: 'weekly' | 'novena';
-  onPageChange: (page: 'weekly' | 'novena') => void;
-  onHomeClick: () => void;
-}
-
-const Header: React.FC<HeaderProps> = ({ 
-  currentPage, 
-  onPageChange,
-  onHomeClick
-}) => {
+const Header: React.FC = () => {
+  const { currentPage, setCurrentPage, resetHome } = useStore();
+  
   const formattedDate = new Intl.DateTimeFormat('hr-HR', {
     day: 'numeric',
     month: 'long',
@@ -23,7 +15,7 @@ const Header: React.FC<HeaderProps> = ({
       <div className="container mx-auto px-6">
         <div className="h-16 flex items-center justify-between">
           <button 
-            onClick={onHomeClick}
+            onClick={resetHome}
             className="flex flex-col text-left focus:outline-none"
           >
             <h1 className="text-xl font-black text-indigo-600 tracking-tight leading-tight">
@@ -37,7 +29,7 @@ const Header: React.FC<HeaderProps> = ({
 
         <div className="flex gap-8 pb-1">
           <button 
-            onClick={() => onPageChange('weekly')}
+            onClick={() => setCurrentPage('weekly')}
             className={`pb-2 text-sm font-bold transition-all border-b-2 ${
               currentPage === 'weekly' 
                 ? 'text-indigo-600 border-indigo-600' 
@@ -47,7 +39,7 @@ const Header: React.FC<HeaderProps> = ({
             Tjedne molitve
           </button>
           <button 
-            onClick={() => onPageChange('novena')}
+            onClick={() => setCurrentPage('novena')}
             className={`pb-2 text-sm font-bold transition-all border-b-2 ${
               currentPage === 'novena' 
                 ? 'text-indigo-600 border-indigo-600' 
