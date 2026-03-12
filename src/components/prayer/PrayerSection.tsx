@@ -1,18 +1,23 @@
 import React from 'react';
-import { Section } from '../../types/prayer';
+import { Section, Verse } from '../../types/prayer';
 import PrayerVerse from './PrayerVerse';
 
 interface PrayerSectionProps {
   section: Section;
+  commonPrayers?: Record<string, string | Verse[]>;
 }
 
-const PrayerSection: React.FC<PrayerSectionProps> = ({ section }) => {
+const PrayerSection: React.FC<PrayerSectionProps> = ({ section, commonPrayers }) => {
   const getSectionTitle = (type: string) => {
     switch (type) {
       case 'velika_zrnca': return 'Velika zrnca';
       case 'mala_zrnca': return 'Mala zrnca';
       case 'završetak': return 'Završetak';
-      default: return type.charAt(0).toUpperCase() + type.slice(1);
+      case 'uvodna_molitva': return 'Uvodna molitva';
+      case 'dnevna_molitva': return 'Dnevna molitva';
+      case 'molitva_na_kraju': return 'Zaključna molitva';
+      case 'litanije': return 'Litanije';
+      default: return type.replace(/_/g, ' ').charAt(0).toUpperCase() + type.replace(/_/g, ' ').slice(1);
     }
   };
 
@@ -31,7 +36,7 @@ const PrayerSection: React.FC<PrayerSectionProps> = ({ section }) => {
       </div>
       <div className="space-y-1">
         {section.verses.map((verse, idx) => (
-          <PrayerVerse key={idx} verse={verse} />
+          <PrayerVerse key={idx} verse={verse} commonPrayers={commonPrayers} />
         ))}
       </div>
     </div>

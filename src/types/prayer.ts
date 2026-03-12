@@ -5,7 +5,7 @@ export interface Verse {
 }
 
 export interface Section {
-  section: 'velika_zrnca' | 'mala_zrnca' | 'završetak' | string;
+  section: 'velika_zrnca' | 'mala_zrnca' | 'završetak' | 'uvodna_molitva' | 'dnevna_molitva' | 'molitva_na_kraju' | 'litanije' | string;
   repeat: number | null;
   verses: Verse[];
   reference?: string;
@@ -18,13 +18,22 @@ export interface AdditionalPrayer {
 }
 
 export interface Prayer {
-  day: string;
+  day?: string;
   dayIndex: number;
   title: string;
   theme: string;
-  opening: 'commonOpening' | string;
+  opening?: 'commonOpening' | string;
   sections: Section[];
   additionalPrayer?: AdditionalPrayer;
+}
+
+export interface PrayerCycle {
+  id: string;
+  title: string;
+  type: 'weekly' | 'novena';
+  prayers: Prayer[];
+  commonOpening?: string[];
+  description?: string;
 }
 
 export interface DataStructure {
@@ -44,6 +53,6 @@ export interface DataStructure {
     };
   };
   roles: Record<string, string>;
-  commonOpening: string[];
-  prayers: Prayer[];
+  commonPrayers?: Record<string, string | Verse[]>;
+  cycles: PrayerCycle[];
 }
