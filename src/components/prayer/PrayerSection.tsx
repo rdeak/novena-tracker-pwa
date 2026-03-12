@@ -1,7 +1,12 @@
 import React from 'react';
 import { Section, Verse } from '../../types/prayer';
-import PrayerVerse from './PrayerVerse';
-import LitanyCarousel from './LitanyCarousel';
+import LitanySection from './sections/LitanySection';
+import AdditionalPrayerSection from './sections/AdditionalPrayerSection';
+import StandardSection from './sections/StandardSection';
+import OpeningSection from './sections/OpeningSection';
+import DailySection from './sections/DailySection';
+import ClosingSection from './sections/ClosingSection';
+import BeadSection from './sections/BeadSection';
 
 interface PrayerSectionProps {
   section: Section;
@@ -12,6 +17,8 @@ interface PrayerSectionProps {
 const PrayerSection: React.FC<PrayerSectionProps> = ({ section, commonPrayers, litanies }) => {
   const getSectionTitle = (type: string) => {
     switch (type) {
+      case 'uvod': return 'Uvodne molitve';
+      case 'zaključak': return 'Zaključne molitve';
       case 'velika_zrnca': return 'Velika zrnca';
       case 'mala_zrnca': return 'Mala zrnca';
       case 'završetak': return 'Završetak';
@@ -19,62 +26,87 @@ const PrayerSection: React.FC<PrayerSectionProps> = ({ section, commonPrayers, l
       case 'dnevna_molitva': return 'Dnevna molitva';
       case 'molitva_na_kraju': return 'Zaključna molitva';
       case 'litanije': return 'Litanije';
+      case 'dodatna_molitva': return 'Dodatna molitva';
       default: return type.replace(/_/g, ' ').charAt(0).toUpperCase() + type.replace(/_/g, ' ').slice(1);
     }
   };
 
-  if (section.section === 'litanije' && litanies) {
-    return (
-      <div className="space-y-4">
-        {section.verses.map((verse, idx) => {
-          const litany = litanies[verse.text.trim()];
-          if (litany) {
-            return (
-              <LitanyCarousel 
-                key={idx} 
-                verses={litany} 
-                title={verse.text.trim()} 
-              />
-            );
-          }
-          return (
-            <PrayerVerse 
-              key={idx} 
-              verse={verse} 
-              commonPrayers={commonPrayers} 
-              litanies={litanies} 
-            />
-          );
-        })}
-      </div>
-    );
+  switch (section.type) {
+    case 'litanije':
+      return (
+        <LitanySection 
+          section={section} 
+          commonPrayers={commonPrayers} 
+          litanies={litanies} 
+        />
+      );
+    case 'dodatna_molitva':
+      return <AdditionalPrayerSection section={section} />;
+    case 'uvod':
+    case 'uvodna_molitva':
+      return (
+        <OpeningSection 
+          section={section} 
+          title={section.type === 'uvod' ? 'Uvodne molitve' : 'Uvodna molitva'}
+          commonPrayers={commonPrayers} 
+          litanies={litanies} 
+        />
+      );
+    case 'dnevna_molitva':
+      return (
+        <DailySection 
+          section={section} 
+          commonPrayers={commonPrayers} 
+          litanies={litanies} 
+        />
+      );
+    case 'zaključak':
+    case 'molitva_na_kraju':
+      return (
+        <ClosingSection 
+          section={section} 
+          title={section.type === 'zaključak' ? 'Zaključne molitve' : 'Zaključna molitva'}
+          commonPrayers={commonPrayers} 
+          litanies={litanies} 
+        />
+      );
+    case 'završetak':
+      return (
+        <ClosingSection 
+          section={section} 
+          title="Završetak"
+          commonPrayers={commonPrayers} 
+          litanies={litanies} 
+        />
+      );
+    case 'velika_zrnca':
+      return (
+        <BeadSection 
+          section={section} 
+          title="Velika zrnca"
+          commonPrayers={commonPrayers} 
+          litanies={litanies} 
+        />
+      );
+    case 'mala_zrnca':
+      return (
+        <BeadSection 
+          section={section} 
+          title="Mala zrnca"
+          commonPrayers={commonPrayers} 
+          litanies={litanies} 
+        />
+      );
+    default:
+      return (
+        <StandardSection 
+          section={section} 
+          title={getSectionTitle(section.type)}
+          commonPrayers={commonPrayers} 
+          litanies={litanies} 
+        />
+      );
   }
-
-  return (
-    <div className="bg-white/60 rounded-xl p-4 mb-4 border border-indigo-100 last:mb-0">
-      <div className="flex justify-between items-center mb-3">
-        <h4 className="text-xs font-bold uppercase tracking-wider text-indigo-400">
-          {getSectionTitle(section.section)}
-          {section.repeat && section.repeat > 1 && (
-            <span className="ml-1 text-gray-400"> — {section.repeat}x</span>
-          )}
-        </h4>
-        {section.reference && (
-          <span className="text-[10px] text-gray-400 italic">{section.reference}</span>
-        )}
-      </div>
-      <div className="space-y-1">
-        {section.verses.map((verse, idx) => (
-          <PrayerVerse 
-            key={idx} 
-            verse={verse} 
-            commonPrayers={commonPrayers} 
-            litanies={litanies} 
-          />
-        ))}
-      </div>
-    </div>
-  );
 };
 
 export default PrayerSection;

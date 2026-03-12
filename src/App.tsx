@@ -50,7 +50,6 @@ function App() {
         {currentPrayer ? (
           <PrayerCard 
             prayer={currentPrayer} 
-            commonOpening={currentLibraryItem?.commonOpening || []}
             commonPrayers={data.commonPrayers || {}}
             litanies={data.litanies || {}}
           />

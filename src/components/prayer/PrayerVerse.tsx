@@ -6,9 +6,10 @@ interface PrayerVerseProps {
   verse: Verse;
   commonPrayers?: Record<string, string | Verse[]>;
   litanies?: Record<string, Verse[]>;
+  showRole?: boolean;
 }
 
-const PrayerVerse: React.FC<PrayerVerseProps> = ({ verse, commonPrayers, litanies }) => {
+const PrayerVerse: React.FC<PrayerVerseProps> = ({ verse, commonPrayers, litanies, showRole = true }) => {
   const litany = litanies ? litanies[verse.text.trim()] : null;
 
   const renderTextWithCommonPrayers = (text: string) => {
@@ -106,7 +107,7 @@ const PrayerVerse: React.FC<PrayerVerseProps> = ({ verse, commonPrayers, litanie
 
   return (
     <div className={`${litany ? 'w-full' : 'flex gap-3 text-sm sm:text-base leading-relaxed'} mb-2 last:mb-0`}>
-      {!litany && (
+      {!litany && showRole && (
         <span className={`font-bold min-w-[1.25rem] ${verse.role === 'P' ? 'text-indigo-600' : 'text-emerald-600'}`}>
           {verse.role}:
         </span>

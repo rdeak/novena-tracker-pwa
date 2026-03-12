@@ -5,40 +5,43 @@ export interface Verse {
 }
 
 export interface Section {
-  section: 'velika_zrnca' | 'mala_zrnca' | 'završetak' | 'uvodna_molitva' | 'dnevna_molitva' | 'molitva_na_kraju' | 'litanije' | string;
+  type: 'velika_zrnca' | 'mala_zrnca' | 'završetak' | 'uvodna_molitva' | 'dnevna_molitva' | 'molitva_na_kraju' | 'litanije' | 'uvod' | 'zaključak' | string;
   repeat: number | null;
-  verses: Verse[];
+  verses: (Verse | string)[];
   reference?: string;
-}
-
-export interface AdditionalPrayer {
   title?: string;
   attribution?: string;
-  text: string;
 }
 
 export interface Prayer {
   day?: string;
   dayIndex: number;
   title: string;
-  theme: string;
-  opening?: 'commonOpening' | string;
+  theme?: string;
   sections: Section[];
-  additionalPrayer?: AdditionalPrayer;
 }
 
-export interface PrayerLibraryItem {
+export interface WeeklyPrayer {
   id: string;
   title: string;
-  type: 'weekly' | 'novena';
+  type: 'weekly';
   prayers: Prayer[];
-  commonOpening?: string[];
   description?: string;
 }
+
+export interface Novena {
+  id: string;
+  title: string;
+  type: 'novena';
+  prayers: Prayer[];
+  description?: string;
+}
+
+export type PrayerLibraryItem = WeeklyPrayer | Novena;
 
 export interface DataStructure {
   roles: Record<string, string>;
   commonPrayers?: Record<string, string | Verse[]>;
   litanies?: Record<string, Verse[]>;
-  library: PrayerLibraryItem[];
+  library: (WeeklyPrayer | Novena)[];
 }
