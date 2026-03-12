@@ -1,5 +1,6 @@
 import React from 'react';
 import { Verse } from '../../types/prayer';
+import LitanyCarousel from './LitanyCarousel';
 
 interface PrayerVerseProps {
   verse: Verse;
@@ -8,6 +9,8 @@ interface PrayerVerseProps {
 }
 
 const PrayerVerse: React.FC<PrayerVerseProps> = ({ verse, commonPrayers, litanies }) => {
+  const litany = litanies ? litanies[verse.text.trim()] : null;
+
   const renderTextWithCommonPrayers = (text: string) => {
     // Check if the text matches a common prayer name
     const trimmedText = text.trim();
@@ -43,22 +46,11 @@ const PrayerVerse: React.FC<PrayerVerseProps> = ({ verse, commonPrayers, litanie
     }
 
     // Check if the text matches a litany name
-    const litany = litanies ? litanies[trimmedText] : null;
     if (litany) {
       return (
-        <span>
-          <span className="font-bold mb-1 block">{text}</span>
-          <div className="pl-4 border-l-2 border-indigo-50 space-y-1">
-            {litany.map((v, i) => (
-              <div key={i} className="text-sm leading-relaxed">
-                <span className={`font-bold mr-2 ${v.role === 'P' ? 'text-indigo-600/70' : 'text-emerald-600/70'}`}>
-                  {v.role}:
-                </span>
-                <span className="text-gray-500 italic">{v.text}</span>
-              </div>
-            ))}
-          </div>
-        </span>
+        <div className="mt-4">
+          <LitanyCarousel verses={litany} title={text} />
+        </div>
       );
     }
 
@@ -113,13 +105,15 @@ const PrayerVerse: React.FC<PrayerVerseProps> = ({ verse, commonPrayers, litanie
   };
 
   return (
-    <div className="flex gap-3 text-sm sm:text-base leading-relaxed mb-2 last:mb-0">
-      <span className={`font-bold min-w-[1.25rem] ${verse.role === 'P' ? 'text-indigo-600' : 'text-emerald-600'}`}>
-        {verse.role}:
-      </span>
-      <div className="flex-grow text-gray-700">
+    <div className={`${litany ? 'w-full' : 'flex gap-3 text-sm sm:text-base leading-relaxed'} mb-2 last:mb-0`}>
+      {!litany && (
+        <span className={`font-bold min-w-[1.25rem] ${verse.role === 'P' ? 'text-indigo-600' : 'text-emerald-600'}`}>
+          {verse.role}:
+        </span>
+      )}
+      <div className={`${litany ? 'w-full' : 'flex-grow text-gray-700'}`}>
         {renderTextWithCommonPrayers(verse.text)}
-        {verse.repeat && verse.repeat > 1 && (
+        {!litany && verse.repeat && verse.repeat > 1 && (
           <span className="ml-2 font-medium text-gray-400 italic">({verse.repeat}x)</span>
         )}
       </div>

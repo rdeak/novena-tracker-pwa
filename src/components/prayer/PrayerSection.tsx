@@ -1,6 +1,7 @@
 import React from 'react';
 import { Section, Verse } from '../../types/prayer';
 import PrayerVerse from './PrayerVerse';
+import LitanyCarousel from './LitanyCarousel';
 
 interface PrayerSectionProps {
   section: Section;
@@ -21,6 +22,33 @@ const PrayerSection: React.FC<PrayerSectionProps> = ({ section, commonPrayers, l
       default: return type.replace(/_/g, ' ').charAt(0).toUpperCase() + type.replace(/_/g, ' ').slice(1);
     }
   };
+
+  if (section.section === 'litanije' && litanies) {
+    return (
+      <div className="space-y-4">
+        {section.verses.map((verse, idx) => {
+          const litany = litanies[verse.text.trim()];
+          if (litany) {
+            return (
+              <LitanyCarousel 
+                key={idx} 
+                verses={litany} 
+                title={verse.text.trim()} 
+              />
+            );
+          }
+          return (
+            <PrayerVerse 
+              key={idx} 
+              verse={verse} 
+              commonPrayers={commonPrayers} 
+              litanies={litanies} 
+            />
+          );
+        })}
+      </div>
+    );
+  }
 
   return (
     <div className="bg-white/60 rounded-xl p-4 mb-4 border border-indigo-100 last:mb-0">

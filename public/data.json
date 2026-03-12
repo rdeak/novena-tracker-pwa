@@ -54,9 +54,14 @@
   "litanies": {
     "Litanije svetog Josipa": [
       { "role": "P", "text": "Gospodine, smiluj se!" },
+      { "role": "S", "text": "Gospodine, smiluj se!" },
+      { "role": "P", "text": "Kriste, smiluj se!" },
       { "role": "S", "text": "Kriste, smiluj se!" },
       { "role": "P", "text": "Gospodine, smiluj se!" },
+      { "role": "S", "text": "Gospodine, smiluj se!" },
       { "role": "P", "text": "Kriste, čuj nas!" },
+      { "role": "S", "text": "Kriste, čuj nas!" },
+      { "role": "P", "text": "Kriste, usliši nas!" },
       { "role": "S", "text": "Kriste, usliši nas!" },
       { "role": "P", "text": "Oče nebeski, Bože," },
       { "role": "S", "text": "smiluj nam se!" },
