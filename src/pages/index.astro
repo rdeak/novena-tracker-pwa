@@ -1,0 +1,25 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import { Dashboard } from '@/components/Dashboard';
+import data from '@/data/data.json';
+import type { Data } from '@/schemas/data';
+---
+
+<Layout title="Molitveni suputnik | Krunice i Devetnice">
+	<main class="max-w-4xl mx-auto px-6 py-12">
+		<header class="mb-12">
+			<h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 bg-linear-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+				Molitveni suputnik
+			</h1>
+			<p class="text-lg text-gray-600 max-w-2xl">
+				Pratite svoje devetnice i svakodnevne krunice na jednom mjestu.
+			</p>
+		</header>
+
+		<Dashboard client:load data={data as Data} />
+
+		<footer class="mt-24 pt-8 border-t border-gray-100 text-center text-gray-400 text-sm">
+			<p>© {new Date().getFullYear()} — Vaš privatni molitveni kutak</p>
+		</footer>
+	</main>
+</Layout>

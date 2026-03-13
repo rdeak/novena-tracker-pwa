@@ -1,0 +1,23 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LibraryItemDetail } from '../../components/LibraryItemDetail';
+import data from '../../data/data.json';
+import type { LibraryItem } from '../../schemas/data';
+
+export function getStaticPaths() {
+  return data.library.map((item) => ({
+    params: { id: item.id },
+    props: { item: item as LibraryItem },
+  }));
+}
+
+const { item } = Astro.props;
+---
+
+<Layout title={`${item.title} - Novena Tracker`}>
+  <main class="min-h-screen bg-gray-50 py-4">
+    <div class="max-w-4xl mx-auto px-4">
+      <LibraryItemDetail client:load item={item} />
+    </div>
+  </main>
+</Layout>
