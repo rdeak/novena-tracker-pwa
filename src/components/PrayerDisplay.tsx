@@ -1,5 +1,5 @@
 import React from 'react';
-import type { Stanza as StanzaType, BasePrayer, PrayerItem, Section } from '../schemas/data';
+import type { BasePrayer, PrayerItem, Section } from '../schemas/data';
 import data from '../data/data.json';
 import { LitanyCarousel } from './LitanyCarousel';
 

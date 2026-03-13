@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import type { LibraryItem, WeeklyLibraryItem, NovenaLibraryItem, Section, PrayerItem } from '../schemas/data';
-import { SectionDisplay, PrayerItemDisplay } from './PrayerDisplay';
-import { usePersistence } from '../hooks/usePersistence';
+import React, {useEffect, useState} from 'react';
+import type {LibraryItem} from '../schemas/data';
+import {PrayerItemDisplay, SectionDisplay} from './PrayerDisplay';
+import {usePersistence} from '../hooks/usePersistence';
 
 interface Props {
   item: LibraryItem;
@@ -78,6 +78,8 @@ export const LibraryItemDetail: React.FC<Props> = ({ item, initialDay }) => {
   if (item.type === 'weekly') {
     const prayer = item.prayers.find(p => p.dayIndex === selectedDay) || item.prayers[0];
     
+    if (!prayer) return null;
+
     return (
       <div className="max-w-2xl mx-auto p-4 md:p-6">
         <header className="mb-8">
@@ -117,6 +119,9 @@ export const LibraryItemDetail: React.FC<Props> = ({ item, initialDay }) => {
 
   // Novena
   const day = item.days.find(d => d.dayIndex === selectedDay) || item.days[0];
+  
+  if (!day) return null;
+
   const isCompleted = currentItemCompleted.includes(selectedDay.toString());
 
   return (

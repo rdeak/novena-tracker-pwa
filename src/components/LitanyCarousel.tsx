@@ -12,9 +12,9 @@ export const LitanyCarousel: React.FC<Props> = ({ title, stanzas }) => {
   // Group stanzas into pairs (P and S)
   const pairs: Stanza[][] = [];
   for (let i = 0; i < stanzas.length; i += 2) {
-    const pair = [stanzas[i]];
+    const pair: Stanza[] = [stanzas[i]!];
     if (i + 1 < stanzas.length) {
-      pair.push(stanzas[i + 1]);
+      pair.push(stanzas[i + 1]!);
     }
     pairs.push(pair);
   }
@@ -43,7 +43,7 @@ export const LitanyCarousel: React.FC<Props> = ({ title, stanzas }) => {
       </div>
 
       <div key={currentIndex} className="flex-1 flex flex-col justify-center space-y-4 py-8 transition-opacity duration-300">
-        {pairs[currentIndex].map((stanza, idx) => (
+        {pairs[currentIndex] && pairs[currentIndex].map((stanza, idx) => (
           <div key={idx} className="flex gap-3">
             <span className="font-bold text-blue-600 min-w-[1.5rem]">{stanza.role}:</span>
             <p className="text-lg text-gray-700 leading-relaxed italic">
