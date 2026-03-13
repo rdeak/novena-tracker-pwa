@@ -1,0 +1,99 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Counter from '../components/Counter';
+---
+
+<Layout title="Welcome to Astro Starter">
+  <div class="space-y-16 py-12">
+    <!-- Hero Section -->
+    <section class="text-center space-y-6 animate-fade-in">
+      <h1 class="text-5xl font-extrabold tracking-tight text-slate-900 sm:text-7xl">
+        Astro + React <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">Starter</span>
+      </h1>
+      <p class="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
+        A production-ready template for static websites on GitHub Pages. 
+        Zero-JS by default, React islands when you need them.
+      </p>
+    </section>
+
+    <!-- Main Content -->
+    <div class="grid md:grid-cols-2 gap-12 items-start">
+      <section class="space-y-8">
+        <div>
+          <h2 class="text-2xl font-bold text-slate-800 border-b border-slate-200 pb-3 mb-4">Core Features</h2>
+          <ul class="space-y-5">
+            <li class="flex gap-4">
+              <span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-sm">1</span>
+              <div>
+                <strong class="text-slate-900">Astro 6:</strong> Blazing fast static site generation with the latest features.
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-sm">2</span>
+              <div>
+                <strong class="text-slate-900">React 19:</strong> Modern UI components with minimal client-side overhead.
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-sm">3</span>
+              <div>
+                <strong class="text-slate-900">Tailwind CSS 4:</strong> Next-gen utility-first styling directly in your CSS.
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <span class="flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-sm">4</span>
+              <div>
+                <strong class="text-slate-900">GitHub Pages:</strong> Optimized workflow for free, reliable static hosting.
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Island Demo -->
+      <section class="flex flex-col items-center justify-center p-10 bg-gradient-to-b from-slate-50 to-white rounded-[2rem] border border-slate-200 shadow-sm relative overflow-hidden group">
+        <div class="absolute inset-0 bg-blue-600 opacity-0 group-hover:opacity-[0.02] transition-opacity pointer-events-none"></div>
+        <h2 class="text-xl font-bold mb-8 text-slate-800">Interactive Demo</h2>
+        <Counter client:load />
+        <p class="mt-6 text-sm text-slate-500 text-center max-w-xs">
+          The counter above is a <strong>React Island</strong>. It only loads JavaScript when it enters the viewport.
+        </p>
+      </section>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="bg-slate-900 rounded-3xl p-10 text-white shadow-xl text-center relative overflow-hidden">
+      <div class="absolute top-0 right-0 -mt-20 -mr-20 w-64 h-64 bg-blue-600 rounded-full blur-3xl opacity-20"></div>
+      <div class="relative z-10">
+        <h2 class="text-3xl font-bold mb-4">Ready to Build?</h2>
+        <p class="text-slate-400 mb-8 max-w-lg mx-auto">
+          Start by editing <code>src/pages/index.astro</code>. Deployment is already configured via GitHub Actions.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a 
+            href="https://docs.astro.build" 
+            class="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-500 transition-all shadow-lg shadow-blue-900/20"
+          >
+            Astro Documentation
+          </a>
+          <a 
+            href="https://github.com/rdeak/novena-tracker-pwa" 
+            class="px-8 py-3 bg-white/10 text-white rounded-xl font-semibold hover:bg-white/20 transition-all backdrop-blur-sm border border-white/10"
+          >
+            Source Code
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>

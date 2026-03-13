@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+/* 
+  Tailwind CSS 4.0 Configuration 
+  
+  Docs: https://tailwindcss.com/docs/v4-beta
+*/
+
+@theme {
+  /* Customize your theme colors, fonts, etc here */
+  /* --font-sans: "Inter", sans-serif; */
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply antialiased bg-slate-50 text-slate-900;
+  }
+}
