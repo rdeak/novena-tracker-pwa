@@ -1,6 +1,0 @@
-# https://www.robotstxt.org/robotstxt.html
-User-agent: *
-Allow: /
-
-# Replace with your actual sitemap URL if you enable the @astrojs/sitemap integration
-# Sitemap: https://username.github.io/sitemap-index.xml

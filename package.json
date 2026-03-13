@@ -1,26 +1,28 @@
 {
-  "name": "astro-gh-pages-starter",
+  "name": "novena-tracker-pwa",
   "type": "module",
   "version": "0.1.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "0.9.7",
-    "@astrojs/react": "5.0.0",
-    "astro": "6.0.4",
-    "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "@astrojs/check": "^0.9.7",
+    "@astrojs/react": "^5.0.0",
+    "@tailwindcss/vite": "^4.2.1",
+    "astro": "^6.0.4",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "tailwindcss": "^4.2.1",
+    "typescript": "^5.9.3",
+    "zod": "4.3.6"
   },
   "devDependencies": {
-    "@tailwindcss/vite": "4.2.1",
-    "@types/react": "19.2.14",
-    "@types/react-dom": "19.2.3",
-    "tailwindcss": "4.2.1",
-    "typescript": "5.9.3"
-  }
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3"
+  },
+  "packageManager": "pnpm@10.14.0+sha512.ad27a79641b49c3e481a16a805baa71817a04bbe06a38d17e60e2eaee83f6a146c6a688125f5792e48dd5ba30e7da52a5cda4c3992b9ccf333f9ce223af84748"
 }
