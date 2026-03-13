@@ -1,0 +1,41 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import { LibraryItemDetail } from '@/components/LibraryItemDetail';
+import data from '@/data/data.json';
+import type { Data, LibraryItem } from '@/schemas/data';
+
+export function getStaticPaths() {
+  const typedData = data as Data;
+  const paths: any[] = [];
+  
+  typedData.library.forEach((item: LibraryItem) => {
+    if (item.type === 'novena') {
+      item.days.forEach((day) => {
+        paths.push({
+          params: { id: item.id, day: day.dayIndex.toString() },
+          props: { item, dayIndex: day.dayIndex },
+        });
+      });
+    } else if (item.type === 'weekly') {
+      item.prayers.forEach((prayer) => {
+        paths.push({
+          params: { id: item.id, day: prayer.dayIndex.toString() },
+          props: { item, dayIndex: prayer.dayIndex },
+        });
+      });
+    }
+  });
+  
+  return paths;
+}
+
+const { item, dayIndex } = Astro.props;
+---
+
+<Layout title={`${item.title} - Dan ${dayIndex} | Molitveni suputnik`}>
+  <main class="min-h-screen bg-gray-50 py-4">
+    <div class="max-w-4xl mx-auto px-4">
+      <LibraryItemDetail client:load item={item} initialDay={dayIndex} />
+    </div>
+  </main>
+</Layout>
