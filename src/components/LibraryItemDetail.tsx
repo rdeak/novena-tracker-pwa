@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import type {LibraryItem} from '../schemas/data';
 import {PrayerItemDisplay, SectionDisplay} from './PrayerDisplay';
 import {usePersistence} from '../hooks/usePersistence';
+import {Link} from "@/components/Link.tsx";
 
 interface Props {
   item: LibraryItem;
@@ -86,7 +87,7 @@ export const LibraryItemDetail: React.FC<Props> = ({ item, initialDay }) => {
           <h1 className="text-3xl font-bold text-gray-900 mb-2">{item.title}</h1>
           <div className="flex flex-wrap gap-2 mt-4">
             {item.prayers.map(p => (
-              <a
+              <Link
                 key={p.dayIndex}
                 href={`/library/${item.id}/day/${p.dayIndex}`}
                 className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
@@ -96,7 +97,7 @@ export const LibraryItemDetail: React.FC<Props> = ({ item, initialDay }) => {
                 }`}
               >
                 {p.day}
-              </a>
+              </Link>
             ))}
           </div>
         </header>

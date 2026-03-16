@@ -1,6 +1,7 @@
 import React, {useMemo} from 'react';
 import type {Data} from '../schemas/data';
 import {usePersistence} from '../hooks/usePersistence';
+import {Link} from "@/components/Link.tsx";
 
 interface Props {
     data: Data;
@@ -53,7 +54,7 @@ export const Dashboard: React.FC<Props> = ({data}) => {
                     Današnja krunica
                 </h2>
                 {todayWeeklyPrayer ? (
-                    <a
+                    <Link
                         href={`/library/${weeklyItem?.id}/day/${todayIndex}`}
                         className="block group bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-blue-300 hover:shadow-md transition-all"
                     >
@@ -72,7 +73,7 @@ export const Dashboard: React.FC<Props> = ({data}) => {
                                 </svg>
                             </div>
                         </div>
-                    </a>
+                    </Link>
                 ) : (
                     <p className="text-gray-500 italic">Nema krunice za danas.</p>
                 )}
@@ -117,7 +118,7 @@ export const Dashboard: React.FC<Props> = ({data}) => {
 
                             return (
                                 <div key={novena.id} className="relative group">
-                                    <a
+                                    <Link
                                         href={`/library/${novena.id}/day/${firstUncompleted}`}
                                         className="block bg-white p-5 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all h-full"
                                     >
@@ -147,7 +148,7 @@ export const Dashboard: React.FC<Props> = ({data}) => {
                                                 </div>
                                             </div>
                                         )}
-                                    </a>
+                                    </Link>
                                     <button
                                         onClick={(e) => {
                                             e.preventDefault();
@@ -179,7 +180,7 @@ export const Dashboard: React.FC<Props> = ({data}) => {
                 </h2>
                 <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                     {otherNovenas.map(novena => (
-                        <a
+                        <Link
                             key={novena.id}
                             href={`/library/${novena.id}/day/1`}
                             className="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 hover:border-purple-300 transition-all flex flex-col justify-between"
@@ -197,7 +198,7 @@ export const Dashboard: React.FC<Props> = ({data}) => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/>
                 </svg>
               </span>
-                        </a>
+                        </Link>
                     ))}
                 </div>
             </section>
