@@ -1,6 +1,6 @@
 import React from 'react';
 import type { BasePrayer, PrayerItem, Section } from '../schemas/data';
-import data from '../data/data.json';
+import data from '@/data/data.json';
 import { LitanyCarousel } from './LitanyCarousel';
 
 interface Props {
@@ -23,7 +23,7 @@ export const BasePrayerDisplay: React.FC<Props> = ({ id }) => {
       <div className="space-y-3">
         {prayer.stanzas.map((stanza, idx) => (
           <div key={idx} className="flex gap-3">
-            <span className="font-bold text-blue-600 min-w-[1.5rem]">{stanza.role}:</span>
+            <span className="font-bold text-blue-600 min-w-6">{stanza.role}:</span>
             <p className="text-gray-700 leading-relaxed">{stanza.text}</p>
           </div>
         ))}
@@ -39,7 +39,7 @@ export const PrayerItemDisplay: React.FC<{ item: PrayerItem }> = ({ item }) => {
 
   return (
     <div className="my-2 flex gap-3">
-      {item.role && <span className="font-bold text-blue-600 min-w-[1.5rem]">{item.role}:</span>}
+      {item.role && <span className="font-bold text-blue-600 min-w-6">{item.role}:</span>}
       <div className="flex-1">
         <p className="text-gray-700 leading-relaxed">
            {item.content}
