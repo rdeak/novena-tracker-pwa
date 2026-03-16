@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   site: 'https://rdeak.github.io',
-  base: '/novena-tacker-pwa',
+  base: '/novena-tracker-pwa',
   output: 'static',
   trailingSlash: 'always',
   integrations: [
