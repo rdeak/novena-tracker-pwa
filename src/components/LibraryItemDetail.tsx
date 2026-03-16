@@ -143,7 +143,7 @@ export const LibraryItemDetail: React.FC<Props> = ({ item, initialDay }) => {
         
         <div className="grid grid-cols-5 sm:grid-cols-9 gap-2 mt-4">
           {item.days.map(d => (
-            <a
+            <Link
               key={d.dayIndex}
               href={`/library/${item.id}/day/${d.dayIndex}`}
               className={`h-10 w-10 rounded-lg text-sm font-medium flex items-center justify-center transition-all ${
@@ -155,7 +155,7 @@ export const LibraryItemDetail: React.FC<Props> = ({ item, initialDay }) => {
               }`}
             >
               {d.dayIndex}
-            </a>
+            </Link>
           ))}
         </div>
       </header>
